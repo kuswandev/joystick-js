@@ -11,21 +11,25 @@ You can try out a live demo of the joystick to see how it works in real-time.
 
 ## Features
 
--   **Customizable Design**: Easily customize the joystick's color, size, and border to match your application's theme.
--   **Responsive to Touch and Mouse**: Works seamlessly across both mobile (touch) and desktop (mouse) environments.
--   **Lightweight**: Optimized for performance with minimal overhead, making it suitable for both small projects and complex applications.
--   **Multiple Joysticks Support**: Create multiple independent joysticks on a single page with unique configurations for each.
--   **Real-Time Feedback**: Get real-time updates of joystick position, angle, and movement via a callback function.
--   **Auto-Centering**: Automatically reset the joystick to its center position when released, with the option to enable/disable this feature per axis.
--   **Axis Locking**: Control movement along a single axis (X or Y) or allow free movement in both directions.
--   **Inverted Axis**: Optionally invert the X or Y axis to fit your input scheme.
--   **Sensitivity Control**: Adjust the sensitivity to fine-tune how far the joystick moves in response to user input.
+- **Customizable Design**: Easily customize the joystick's color, size, and border to match your application's theme.
+- **Responsive to Touch and Mouse**: Works seamlessly across both mobile (touch) and desktop (mouse) environments.
+- **Lightweight**: Optimized for performance with minimal overhead, making it suitable for both small projects and complex applications.
+- **Multiple Joysticks Support**: Create multiple independent joysticks on a single page with unique configurations for each.
+- **Real-Time Feedback**: Get real-time updates of joystick position, angle, and movement via a callback function.
+- **Auto-Centering**: Automatically reset the joystick to its center position when released, with the option to enable/disable this feature per axis.
+- **Axis Locking**: Control movement along a single axis (X or Y) or allow free movement in both directions.
+- **Inverted Axis**: Optionally invert the X or Y axis to fit your input scheme.
+- **Sensitivity Control**: Adjust the sensitivity to fine-tune how far the joystick moves in response to user input.
 
 ## Installation
 
-Currently, the only available installation option is to download the `joystick-min.js` file directly and include it in your project.
+Currently, the only available installation option is to download the `joystick.js` or `joystick-min.js` file directly and include it in your project.
 
 ```JavaScript
+// Use standard version
+import { Joystick } from './path-to-your/joystick.js';
+
+// Or use minimize version
 import { Joystick } from './path-to-your/joystick-min.js';
 ```
 
@@ -124,9 +128,9 @@ console.log('Joystick Y Position:', joystick.y) // Example output: 50.00
 
 The callback function, provided when creating a joystick instance, is triggered every time the joystick is moved. The callback receives an object containing the following properties:
 
--   `angle`: The angle of the joystick, in degrees (0-360).
--   `x`: The X position as a percentage (-100 to 100).
--   `y`: The Y position as a percentage (-100 to 100).
+- `angle`: The angle of the joystick, in degrees (0-360).
+- `x`: The X position as a percentage (-100 to 100).
+- `y`: The Y position as a percentage (-100 to 100).
 
 #### Example of Callback Usage
 
